@@ -1,27 +1,23 @@
 //渲染组件,处理发送信息逻辑
 
 import React from 'react'
-const socket = require('socket.io-client')('http://localhost:8000');   //客户端socket.io
+//huo
+const socket = require('socket.io-client')('http://118.89.53.127:8000');   //客户端socket.io
 
 import '../style/foot.less'
 
 export default class FootComp extends React.Component{
     constructor(args){
         super(args);
-
         this.state={
             hasCont:'',
             message:'',
             inputVal:'',
-        }
-
-
+        };
         this.clickBtn = this.clickBtn.bind(this);
         this.dataChange = this.dataChange.bind(this);
         this.handleEnterKey = this.handleEnterKey.bind(this);
     }
-
-
 
     componentDidMount(){
         document.addEventListener("keydown",this.handleEnterKey);
