@@ -1,4 +1,6 @@
 import React from 'react';
+var urlPath = window.document.location.href;
+console.log(urlPath,2333);
 const socket = require('socket.io-client')('http://118.89.53.127:8000');   //客户端socket.io
 import $ from 'jquery'
 
